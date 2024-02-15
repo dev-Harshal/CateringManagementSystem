@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>{{category_title}} Categories</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">{{category_title}} Categories</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+
+          {% for category in categorys %}
+
+            <div class="col-4">
+                <!-- Card with an image on top -->
+                <div class="card text-center">
+                  <img src="{{category.sub_category_image.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>{{category.sub_title}}</strong></h5>
+
+                    <a href="{% url "display-menu" category.id %}">
+                      <button type="button" class="btn btn-primary"><i class="bi bi-star me-1"></i>Explore Options</button>
+                    </a>
+                  </div>
+                </div><!-- End Card with an image on top -->
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+</main>
+
+
+{% endblock content %}

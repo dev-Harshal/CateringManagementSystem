@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>{{sub_category_title}} Options</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">{{sub_category_title}} Options</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+
+          {% for dish in dishes %}
+
+            <div class="col-3">
+                <!-- Card with an image on top -->
+                <div class="card text-center">
+                  <img src="{{dish.dish_image.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>{{dish.dish_name}}</strong></h5>
+                    <button type="button" class="btn btn-success">
+                        Price<strong><i class="bi bi-currency-rupee"></i>{{dish.dish_price}}/-</strong>
+                    </button>
+                  </div>
+                </div><!-- End Card with an image on top -->
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+
+</main>
+
+
+{% endblock content %}

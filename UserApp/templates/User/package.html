@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Food Package</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">Food Package</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+
+            <div class="col-4">
+                <!-- Card with an image on top -->
+                <div class="card text-center">
+                  <img src="{% static "Index/img/food1.jpg" %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Silver Package</strong></h5>
+                    <p class="card-text">Basic Package with fixed number of <br> Options.</p>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered1">
+                        <i class="bi bi-star me-1"></i>Explore
+                      </button>
+
+                      <div class="modal fade" id="verticalycentered1" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Silver Package Menu</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal End -->
+                  </div>
+                </div><!-- End Card with an image on top -->
+            </div>
+
+            <div class="col-4">
+                <!-- Card with an image on top -->
+                <div class="card text-center">
+                  <img src="{% static "Index/img/food2.jpg" %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Gold Package</strong></h5>
+                    <p class="card-text">Popular Package with a few Customization Options.</p>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered2">
+                        <i class="bi bi-star me-1"></i>Explore
+                      </button>
+
+                      <div class="modal fade" id="verticalycentered2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Gold Package Menu</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div><!-- End Card with an image on top -->
+            </div>
+
+            <div class="col-4">
+                <!-- Card with an image on top -->
+                <div class="card text-center">
+                  <img src="{% static "Index/img/food3.jpg" %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><strong>Platinum Package</strong></h5>
+                    <p class="card-text">Most Premiun Package with lots of Customization Options.</p>
+                        
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verticalycentered3">
+                        <i class="bi bi-star me-1"></i>Explore
+                      </button>
+
+                      <div class="modal fade" id="verticalycentered3" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Platinum Package Menu</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal End -->
+                  </div>
+                </div><!-- End Card with an image on top -->
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+{% endblock content %}

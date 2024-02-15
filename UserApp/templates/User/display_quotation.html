@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Quotation</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">Quotation</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+
+
+      <section class="section d-flex justify-content-around">
+
+        <div class="card col-9">
+            <div class="card-body">
+              <h5 class="card-title">Your Cart <i class="bi bi-cart"></i></h5>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Dish Category</th>
+                    <th scope="col">Dish Name</th>
+                    <th scope="col">Price/Person</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    
+                    <tr>
+                        <td>{{item.0}}</td>
+                        <td>{{item.1}}</td>
+                        <td>{{item.2}}</td>
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+                </table>
+                <hr>
+                <p><strong>Number of Guests:</strong> {{guests_count}}</p>
+
+                    <div class="row justify-content-end">
+                        <div class="col-lg-2 col-md-3 label "><strong>Total:</strong></div>
+                        <div class="col-lg-2 col-md-3">&#8377;{{total}}</div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-2 col-md-3 label "><strong>GST:</strong></div>
+                        <div class="col-lg-2 col-md-3">18 %</div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-2 col-md-3 label "><strong>CGST:</strong></div>
+                        <div class="col-lg-2 col-md-3">18 %</div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-2 col-md-3 label "><strong>Discount:</strong></div>
+                        <div class="col-lg-2 col-md-3">10 %</div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-lg-2 col-md-3 label "><strong>Final Amount:</strong></div>
+                        <div class="col-lg-2 col-md-3">&#8377;{{final_amt}}</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3"><button class="btn btn-primary" type="submit">Clear</button></div>
+                        
+                    </div>
+            </div>
+
+
+      </section>
+
+<main>
+
+
+{% endblock content %}
